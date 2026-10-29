@@ -1,0 +1,49 @@
+{
+  "job_id": "dbh7rtpt9uhs73c9m0tg",
+  "backend": "ibm_kingston",
+  "rows": [
+    {
+      "state": "|0>",
+      "bloch_x": -0.0215,
+      "bloch_y": -0.0039,
+      "bloch_z": 0.9316,
+      "fidelity": 0.9658
+    },
+    {
+      "state": "|1>",
+      "bloch_x": -0.0059,
+      "bloch_y": -0.0371,
+      "bloch_z": -0.9082,
+      "fidelity": 0.9541
+    },
+    {
+      "state": "|+>",
+      "bloch_x": 0.9453,
+      "bloch_y": 0.0645,
+      "bloch_z": -0.0039,
+      "fidelity": 0.9727
+    },
+    {
+      "state": "|->",
+      "bloch_x": -0.9414,
+      "bloch_y": -0.0957,
+      "bloch_z": -0.0098,
+      "fidelity": 0.9707
+    },
+    {
+      "state": "|+i>",
+      "bloch_x": -0.0547,
+      "bloch_y": 0.9082,
+      "bloch_z": 0.0117,
+      "fidelity": 0.9541
+    },
+    {
+      "state": "|-i>",
+      "bloch_x": 0.0488,
+      "bloch_y": -0.8926,
+      "bloch_z": 0.0098,
+      "fidelity": 0.9463
+    }
+  ],
+  "mean_fidelity": 0.9606119791666666
+}
