@@ -1,0 +1,50 @@
+{
+  "job_id": "dbhb93sdgr2s73ct6i4g",
+  "backend": "ibm_phoenix",
+  "kind": "bare control (prep + readout only)",
+  "per_state": {
+    "|0>": {
+      "counts": {
+        "0": 99,
+        "1": 1
+      },
+      "success": 0.99
+    },
+    "|1>": {
+      "counts": {
+        "1": 100
+      },
+      "success": 1.0
+    },
+    "|+>": {
+      "counts": {
+        "0": 100
+      },
+      "success": 1.0
+    },
+    "|->": {
+      "counts": {
+        "1": 99,
+        "0": 1
+      },
+      "success": 0.99
+    },
+    "|+i>": {
+      "counts": {
+        "0": 100
+      },
+      "success": 1.0
+    },
+    "|-i>": {
+      "counts": {
+        "1": 99,
+        "0": 1
+      },
+      "success": 0.99
+    }
+  },
+  "mean_success": 0.9950000000000001,
+  "fez_control_mean": 0.9733,
+  "phoenix_teleport_mean": 0.9583,
+  "teleport_cost_phoenix": 0.036700000000000066
+}

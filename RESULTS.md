@@ -192,13 +192,33 @@ When a hardware teleportation number is quoted anywhere, the honest
 question is "compared to what control?" The gap between the two *is*
 the protocol's price.
 
-**ibm_phoenix — budget pending.** The teleportation result (0.9583)
-is in hand, but the matching bare-control run for ibm_phoenix was
-still queued at the time of writing. Until it completes, phoenix's
-≈ 4-point total loss cannot yet be split between preparation/readout
-and the teleportation machinery, and this document does not guess at
-the split. The fez decomposition (≈ 7 points) is the only
-teleportation-cost figure this study claims.
+**ibm_phoenix — budget closed.** The matching bare-control run
+(job `dbhb93sdgr2s73ct6i4g`, Oct 28, 2026; preparation + matching-basis
+readout only, 100 shots per state) returned:
+
+| \|0⟩ | \|1⟩ | \|+⟩ | \|−⟩ | \|+i⟩ | \|−i⟩ | **Mean** |
+|------|------|------|------|-------|-------|----------|
+| 0.99 | 1.00 | 1.00 | 0.99 | 1.00 | 0.99 | **0.9950** |
+
+Decomposition of the phoenix result:
+
+- Preparation + readout ceiling: **0.9950** (0.5 points lost before
+  teleportation begins — a cleaner floor than fez's 0.9733)
+- Teleportation result: **0.9583**
+- Cost of the teleportation machinery itself: **≈ 3.7 points** —
+  about half the fez figure (≈ 7 points)
+
+With both budgets closed, the cross-generation comparison is complete:
+Nighthawk loses less at every stage — almost nothing to preparation
+and readout (0.5 vs 2.7 points), and roughly half as much to the
+teleportation machinery itself (3.7 vs 7.2 points). On phoenix the
+remaining error sits overwhelmingly in the machinery (Bell-pair
+fidelity, two-qubit gates, mid-circuit measurement and feed-forward),
+not in state preparation or readout. The phase-sensitive (±i) states
+remain the most expensive through the machinery specifically: perfect
+or near-perfect in the phoenix control (1.00 / 0.99), yet the lowest
+teleportation scores (0.94 / 0.94) — consistent with dephasing during
+the measurement-and-correction window.
 
 ## 5. Case study: the first Nighthawk run and the readout flaw
 
