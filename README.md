@@ -3,6 +3,17 @@
 **Author:** Mahara Taylor (ManyMoons), independent researcher
 **Platform:** IBM Quantum / Qiskit — ibm_fez, ibm_kingston, ibm_phoenix
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23809804.svg)](https://doi.org/10.5281/zenodo.23809804)
+
+## How to cite
+
+Taylor, M. (2026). *Six-state quantum teleportation benchmark on real IBM
+hardware (ibm_fez, ibm_kingston, ibm_phoenix)* (v1.0.0). Zenodo.
+https://doi.org/10.5281/zenodo.23809804
+
+The concept DOI https://doi.org/10.5281/zenodo.23809803 always resolves to
+the latest version of this record.
+
 ## Summary
 
 A six-state quantum teleportation protocol — full dynamic circuits with
