@@ -1,0 +1,159 @@
+{
+  "backend": "ibm_phoenix",
+  "mode": "hardware",
+  "shots_per_circuit": 4096,
+  "live": {
+    "|0>": {
+      "fidelity": 0.971923828125,
+      "sigma": 0.002581101522659419,
+      "counts": {
+        "0": 3981,
+        "1": 115
+      }
+    },
+    "|1>": {
+      "fidelity": 0.958740234375,
+      "sigma": 0.0031076627417085706,
+      "counts": {
+        "1": 3927,
+        "0": 169
+      }
+    },
+    "|+>": {
+      "fidelity": 0.955810546875,
+      "sigma": 0.0032111844247176423,
+      "counts": {
+        "0": 3915,
+        "1": 181
+      }
+    },
+    "|->": {
+      "fidelity": 0.947021484375,
+      "sigma": 0.003499853251219428,
+      "counts": {
+        "1": 3879,
+        "0": 217
+      }
+    },
+    "|+i>": {
+      "fidelity": 0.943115234375,
+      "sigma": 0.0036190984107693463,
+      "counts": {
+        "0": 3863,
+        "1": 233
+      }
+    },
+    "|-i>": {
+      "fidelity": 0.941162109375,
+      "sigma": 0.0036768912959850154,
+      "counts": {
+        "1": 3855,
+        "0": 241
+      }
+    }
+  },
+  "postselection": {
+    "|0>": {
+      "postselected_fidelity": 0.9803149606299213,
+      "postselected_sigma": 0.00435816938054103,
+      "kept_shots": 1016,
+      "software_corrected_fidelity": 0.96923828125,
+      "software_corrected_sigma": 0.0026979916670615695,
+      "counts": {
+        "000": 996,
+        "110": 935,
+        "001": 1087,
+        "111": 952,
+        "010": 39,
+        "011": 44,
+        "101": 23,
+        "100": 20
+      }
+    },
+    "|1>": {
+      "postselected_fidelity": 0.9596774193548387,
+      "postselected_sigma": 0.00588850028488458,
+      "kept_shots": 1116,
+      "software_corrected_fidelity": 0.969970703125,
+      "software_corrected_sigma": 0.0026666862173647435,
+      "counts": {
+        "101": 907,
+        "011": 1009,
+        "100": 1071,
+        "010": 986,
+        "001": 48,
+        "110": 14,
+        "000": 45,
+        "111": 16
+      }
+    },
+    "|+>": {
+      "postselected_fidelity": 0.9576669802445907,
+      "postselected_sigma": 0.006175615507716691,
+      "kept_shots": 1063,
+      "software_corrected_fidelity": 0.960205078125,
+      "software_corrected_sigma": 0.0030543292655976356,
+      "counts": {
+        "111": 948,
+        "010": 1002,
+        "101": 965,
+        "000": 1018,
+        "011": 47,
+        "110": 34,
+        "100": 45,
+        "001": 37
+      }
+    },
+    "|->": {
+      "postselected_fidelity": 0.9621570482497634,
+      "postselected_sigma": 0.005869187597846813,
+      "kept_shots": 1057,
+      "software_corrected_fidelity": 0.96484375,
+      "software_corrected_sigma": 0.0028777283286441123,
+      "counts": {
+        "110": 947,
+        "100": 1017,
+        "001": 999,
+        "011": 989,
+        "111": 29,
+        "010": 50,
+        "000": 40,
+        "101": 25
+      }
+    },
+    "|+i>": {
+      "postselected_fidelity": 0.9467980295566503,
+      "postselected_sigma": 0.00704465145150537,
+      "kept_shots": 1015,
+      "software_corrected_fidelity": 0.947509765625,
+      "software_corrected_sigma": 0.0034845855342174807,
+      "counts": {
+        "101": 996,
+        "010": 72,
+        "000": 961,
+        "110": 945,
+        "011": 979,
+        "100": 54,
+        "111": 36,
+        "001": 53
+      }
+    },
+    "|-i>": {
+      "postselected_fidelity": 0.946078431372549,
+      "postselected_sigma": 0.007072040575822823,
+      "kept_shots": 1020,
+      "software_corrected_fidelity": 0.954345703125,
+      "software_corrected_sigma": 0.003261472466444763,
+      "counts": {
+        "010": 1027,
+        "001": 993,
+        "111": 924,
+        "100": 965,
+        "101": 38,
+        "000": 55,
+        "011": 39,
+        "110": 55
+      }
+    }
+  }
+}

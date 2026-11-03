@@ -319,6 +319,11 @@ All raw counts and per-state results are in `data/`:
 | `run2_result.json` / `hardware_tomography_results.csv` | ibm_kingston tomography (job `dbh7rtpt9uhs73c9m0tg`) |
 | `run1_phoenix_result.json` | Corrected ibm_phoenix run (job `dbh8et4dgr2s73ct0mv0`) |
 | `run1_phoenix_result_zreadout.json` | Flawed first phoenix run (job `dbh7te4dgr2s73csvfe0`) — see Section 5 |
+| `postselection_phoenix_results.json` | Post-selection test, ibm_phoenix Nov 2, 2026 (job `dbkcb6gnceqs73aljkfg`) — see Section 9.1 |
+| `tomography_phoenix_results.json` | Teleportation tomography, ibm_phoenix Nov 2, 2026 (job `dbkcbo9kdqps73926160`) — see Section 9.2 |
+| `interleaved_phoenix_results.json` | Interleaved live vs. post-selected, single job, ibm_phoenix Nov 2, 2026 (job `dbkcf1pffo6c73bb7v9g`) — see Section 9.3 |
+| `bobfirst_phoenix_results.json` | Bob-first readout ordering, ibm_phoenix Nov 2, 2026 (job `dbkcg0t6p51s73cmc3vg`) — see Section 9.4 |
+| `dd_phoenix_results.json` | XY4 dynamical decoupling + pinned layout, ibm_phoenix Nov 2, 2026 (job `dbkd7mhkdqps73927g6g`) — see Section 9.5 |
 
 The notebooks for the Oct 28 runs are in `notebooks/`. They take the
 IBM Quantum API key via `getpass` at runtime; no credentials are
@@ -326,6 +331,95 @@ stored in them. Anyone with an IBM Quantum account can re-run the
 protocol and compare against these tables — and should expect their
 numbers to differ somewhat, because device variance is part of what
 this benchmark measures.
+
+## 9. November 2, 2026 — the ±i follow-up arc
+
+The October budget closed with one unexplained residue: on
+ibm_phoenix the ±i states were at or near the ceiling in the bare
+control (1.00 / 0.99) yet the lowest in teleportation (0.94 / 0.94).
+A reader's objection sharpened the problem — the mid-circuit window
+is ~1 µs against T2 ≥ 100 µs, so idle dephasing in that window
+cannot cost ~6 points. Five follow-up experiments ran on
+ibm_phoenix on November 2, 2026, each designed against a
+pre-registered decision rule. Scripts for all five are in
+`notebooks/`; raw results in `data/`.
+
+### 9.1 Post-selection — is it the feed-forward?
+
+Job `dbkcb6gnceqs73aljkfg`. The October circuits with the live
+feed-forward corrections removed: Alice is still measured
+mid-circuit, and the corrections are applied afterwards in software
+(Pauli-frame tracking). Software-corrected fidelities: |+i⟩ 0.9512,
+|−i⟩ 0.9492 — indistinguishable from the live protocol (0.94 /
+0.94) and ~4.5 points below the 0.995 bare control. Removing the
+corrections changed nothing. **The feed-forward path is
+exonerated**; the loss is already present before any correction
+could act.
+
+### 9.2 Tomography — rotation or shrinkage?
+
+Job `dbkcbo9kdqps73926160`. Full three-basis tomography of Bob's
+output under the live protocol (1,024 shots per basis). The
+reconstructed Bloch vectors came back with lengths |r| of
+0.87–0.94 across the six states (mean fidelity 0.9468): the
+vectors are *shorter*, not twisted. Three of the four equatorial
+states also showed a consistent phase offset of +5 to +7.6°, but a
+pure rotation of that size costs only ≈ 0.2 fidelity points. The
+deficit is **shrinkage — true coherence loss** — with at most a
+small frame offset on top.
+
+### 9.3 Interleaved replication — same job, same calibration
+
+Job `dbkcf1pffo6c73bb7v9g`. Live-correction and post-selection
+circuits interleaved in a single submission (4,096 shots per
+circuit): live |+i⟩ 0.9431 / |−i⟩ 0.9412; post-selected (Alice = 00
+branch) 0.9468 / 0.9461. The deficit replicates inside one
+calibration window, so it is not cross-day drift and does not
+depend on how the corrections are delivered. (Method note: the two
+circuit types were transpiled independently in this job, so their
+physical layouts may differ; the ±i gaps are under 1σ, and the
+follow-up in 9.5 pins a single layout for exactly this reason.)
+
+### 9.4 Bob-first ordering — does the loss precede the readout?
+
+Job `dbkcg0t6p51s73cmc3vg`. Bob is rotated and measured *before*
+Alice's qubits are measured, so his outcome is recorded before
+the neighbouring readout pulses ever fire: |+i⟩ 0.9521, |−i⟩
+0.9451, while the pole states in the same job reached 0.969. No
+recovery. **The coherence is already gone before Alice's readout
+window opens** — readout crosstalk during that window is not the
+mechanism.
+
+### 9.5 Pinned layout + dynamical decoupling — what actually helps
+
+Job `dbkd7mhkdqps73927g6g`. Two changes, A/B-tested inside one
+job: (i) the physical triple was pinned to the day's best
+calibration — qubits [81, 91, 92], CZ errors ≈ 0.1% on both links,
+Bob T2 of 173 µs; (ii) half the circuits added an XY4
+dynamical-decoupling sequence on Bob across his idle window.
+
+On the pinned triple the unmodified protocol posted mean 0.9708
+(|+i⟩ 0.9702, |−i⟩ 0.9570) against a same-day bare control of
+0.9969 — a total teleportation cost of **2.6 points**, down from
+3.7 in October. The DD variant was slightly *worse* on all six
+states (−0.3 to −1.0 points): the echo pulses and their added
+circuit time cost more than the refocusing recovered, which says
+the dephasing behaves Markovian — a steady T2-rate leak — rather
+than slow and refocusable. The practical prescription is
+unfashionable and clear: **pin the best-calibrated triple and
+keep the circuit short.** Physical-qubit selection alone was
+worth ~2 points on the ±i pair — more than any pulse-level trick
+tried here.
+
+### 9.6 Verdict
+
+Across the arc: the ±i deficit is phase decoherence accrued in
+the entangled front half of the circuit — state preparation,
+Bell-pair creation, and Alice's entangling gates. It is not the
+feed-forward corrections (9.1), not a frame rotation (9.2), not
+calibration drift (9.3), and not Alice's readout window (9.4).
+The ±i states are simply the canary: they live on the equator of
+the Bloch sphere, and the phase is what dies first.
 
 ---
 

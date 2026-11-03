@@ -133,10 +133,20 @@ the companion Lab Pack datasets. Full details: [RESULTS.md](RESULTS.md).
 - `README.md` — this file
 - `RESULTS.md` — the full results write-up
 - `data/` — raw counts and per-state result files (CSV + JSON) for
-  every run cited
+  every run cited, including the five November 2, 2026 ibm_phoenix
+  follow-up datasets (`postselection_phoenix_results.json`,
+  `tomography_phoenix_results.json`,
+  `interleaved_phoenix_results.json`, `bobfirst_phoenix_results.json`,
+  `dd_phoenix_results.json`)
 - `notebooks/` — the Colab notebooks used for the Oct 28 kingston
   tomography and corrected phoenix runs (API key entered via
-  `getpass` at runtime; no credentials are stored in them)
+  `getpass` at runtime; no credentials are stored in them), plus the
+  five November 2 ibm_phoenix follow-up run scripts
+  (`postselection_phoenix.py`, `tomography_phoenix.py`,
+  `interleaved_phoenix.py`, `bobfirst_phoenix.py`, `dd_phoenix.py`;
+  instance CRN left as a placeholder and the API token read from
+  stdin, so they default to `MODE = "test"` and cannot submit to
+  hardware unattended)
 
 ## How to cite
 

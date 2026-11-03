@@ -1,0 +1,133 @@
+{
+  "backend": "ibm_phoenix",
+  "mode": "hardware",
+  "shots_per_state": 4096,
+  "rows": [
+    {
+      "state": "|0>",
+      "basis": "Z",
+      "counts": {
+        "111": 960,
+        "000": 1007,
+        "001": 1015,
+        "110": 985,
+        "010": 31,
+        "011": 19,
+        "100": 41,
+        "101": 38
+      },
+      "bobfirst_software_corrected_fidelity": 0.968505859375,
+      "bobfirst_software_corrected_sigma": 0.002728890022465203,
+      "postselected_fidelity": 0.9608778625954199,
+      "postselected_sigma": 0.005989143786175615,
+      "kept_shots": 1048,
+      "shots": 4096,
+      "nov2_software_corrected_reference": 0.9492
+    },
+    {
+      "state": "|1>",
+      "basis": "Z",
+      "counts": {
+        "011": 1004,
+        "101": 961,
+        "010": 1017,
+        "100": 985,
+        "111": 12,
+        "000": 50,
+        "110": 23,
+        "001": 44
+      },
+      "bobfirst_software_corrected_fidelity": 0.968505859375,
+      "bobfirst_software_corrected_sigma": 0.002728890022465203,
+      "postselected_fidelity": 0.9516908212560387,
+      "postselected_sigma": 0.006664883964042441,
+      "kept_shots": 1035,
+      "shots": 4096,
+      "nov2_software_corrected_reference": 0.9355
+    },
+    {
+      "state": "|+>",
+      "basis": "X",
+      "counts": {
+        "101": 968,
+        "111": 939,
+        "000": 1068,
+        "010": 986,
+        "100": 53,
+        "001": 31,
+        "110": 33,
+        "011": 18
+      },
+      "bobfirst_software_corrected_fidelity": 0.967041015625,
+      "bobfirst_software_corrected_sigma": 0.002789519383270306,
+      "postselected_fidelity": 0.9527207850133809,
+      "postselected_sigma": 0.0063389181235198825,
+      "kept_shots": 1121,
+      "shots": 4096,
+      "nov2_software_corrected_reference": 0.958
+    },
+    {
+      "state": "|->",
+      "basis": "X",
+      "counts": {
+        "100": 963,
+        "011": 990,
+        "001": 1040,
+        "110": 954,
+        "010": 54,
+        "000": 56,
+        "101": 23,
+        "111": 16
+      },
+      "bobfirst_software_corrected_fidelity": 0.963623046875,
+      "bobfirst_software_corrected_sigma": 0.0029254102279079137,
+      "postselected_fidelity": 0.9450441609421001,
+      "postselected_sigma": 0.007139139710842922,
+      "kept_shots": 1019,
+      "shots": 4096,
+      "nov2_software_corrected_reference": 0.9561
+    },
+    {
+      "state": "|+i>",
+      "basis": "Y",
+      "counts": {
+        "011": 1033,
+        "101": 928,
+        "000": 991,
+        "110": 948,
+        "100": 75,
+        "001": 50,
+        "010": 48,
+        "111": 23
+      },
+      "bobfirst_software_corrected_fidelity": 0.9521484375,
+      "bobfirst_software_corrected_sigma": 0.0033351887503653556,
+      "postselected_fidelity": 0.9296435272045028,
+      "postselected_sigma": 0.007833063584177338,
+      "kept_shots": 1066,
+      "shots": 4096,
+      "nov2_software_corrected_reference": 0.9512
+    },
+    {
+      "state": "|-i>",
+      "basis": "Y",
+      "counts": {
+        "100": 1009,
+        "001": 956,
+        "111": 941,
+        "000": 86,
+        "010": 965,
+        "101": 54,
+        "110": 50,
+        "011": 35
+      },
+      "bobfirst_software_corrected_fidelity": 0.945068359375,
+      "bobfirst_software_corrected_sigma": 0.0035601059487081026,
+      "postselected_fidelity": 0.9214611872146119,
+      "postselected_sigma": 0.008129683345512933,
+      "kept_shots": 1095,
+      "shots": 4096,
+      "nov2_software_corrected_reference": 0.9492
+    }
+  ]
+}
