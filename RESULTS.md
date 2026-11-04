@@ -421,6 +421,108 @@ calibration drift (9.3), and not Alice's readout window (9.4).
 The ±i states are simply the canary: they live on the equator of
 the Bloch sphere, and the phase is what dies first.
 
+## 10. November 3, 2026 — the pair, and the clock
+
+Section 9 localized the ±i deficit to the entangled front half and
+left one fork unresolved — the Bell pair itself, or Alice's
+entangling gates — and behind it the reader's arithmetic objection
+(§9, introduction): a ~1 µs window against T2 ≥ 100 µs should not
+cost ~6 points. Two experiments ran on ibm_phoenix on November 3,
+2026, both on the day's best pinned triple [90, 80, 81] (CZ errors
+0.091% / 0.093%, Bob readout error 0.232%, Bob T1 206 µs, T2
+182 µs), each Aer-validated before submission and read against
+pre-registered decision rules. Scripts in `notebooks/`
+(`bellpair_phoenix.py`, `holdsweep_phoenix.py`); raw results in
+`data/`.
+
+### 10.1 Bell-pair autopsy — is the pair already shrunk?
+
+Build the pair exactly as the protocol does (H on Alice's half,
+CNOT to Bob) on physical qubits [80, 81], then stop — no input
+qubit, no Bell measurement, no corrections — and tomograph the
+pair itself: 9 measurement settings, 4,096 shots each. Job
+`dbl92nl8mdtc73d5mqmg`.
+
+| Quantity | Value | Target |
+|----------|-------|--------|
+| ⟨XX⟩ | +0.9873 | +1 |
+| ⟨YY⟩ | −0.9849 | −1 |
+| ⟨ZZ⟩ | +0.9917 | +1 |
+| Fidelity to \|Φ+⟩ (direct projector) | 0.9910 | 1 |
+| Fidelity (physicality-projected) | 0.9760 | 1 |
+| Purity Tr(ρ²) | 0.9858 | 1 |
+| Concurrence | 0.9547 | 1 |
+
+Single-qubit marginals were ≤ 0.027 in magnitude throughout. The
+two fidelity figures are one measurement read by two estimators:
+the direct projector value (1 + ⟨XX⟩ − ⟨YY⟩ + ⟨ZZ⟩)/4 = 0.9910,
+and a physicality-projected 15-parameter reconstruction at 0.9760,
+reported as a conservative floor — the gap is estimator behavior
+under sampling noise, not two different pairs.
+
+A pair carrying the ±i deficit would show correlator magnitudes
+of 0.87–0.94 — the shrinkage measured in Bob's teleported states
+(§9.2). It shows ~0.99, and two-qubit readout error (~0.2–0.3%
+per qubit) inflates even that small gap by roughly half a point.
+**The pair is exonerated:** at most ~1 of the 2.6–3.7 points of
+total teleportation cost can sit in pair creation.
+
+### 10.2 Hold-time sweep — the dose-response of waiting
+
+The live protocol verbatim, with a hold of D µs inserted on all
+three qubits immediately after pair creation (the pair and the
+input cannot proceed without each other, so all three wait),
+D ∈ {0, 5, 10, 20, 40, 80} µs. Instrument states: |0⟩ as the
+phase-insensitive pole control, |+⟩ and |±i⟩ on the equator.
+4,096 shots per circuit; same-day bare controls. Job
+`dbl92nt8mdtc73d5mqn0`.
+
+| State | Ctrl | 0 µs | 5 µs | 10 µs | 20 µs | 40 µs | 80 µs |
+|-------|------|------|------|-------|-------|-------|-------|
+| \|0⟩ | 0.9993 | 0.9878 | 0.9646 | 0.9507 | 0.9160 | 0.8669 | 0.7908 |
+| \|+⟩ | 0.9983 | 0.9050 | 0.6431 | 0.4165 | 0.2456 | 0.4805 | 0.4702 |
+| \|+i⟩ | 0.9990 | 0.8994 | 0.6238 | 0.4263 | 0.2566 | 0.4888 | 0.4768 |
+| \|−i⟩ | 0.9929 | 0.9021 | 0.6372 | 0.4285 | 0.2397 | 0.4871 | 0.4651 |
+
+Equatorial fidelity does not decay gently toward 0.5: it is
+halved by ~5 µs, overshoots *below* 0.5 at 20 µs (0.24–0.26 —
+the signature of a coherent phase rotation of ≈π accumulating
+alongside the dephasing), and settles at the fully-mixed ~0.47
+by 40 µs. The pole state degrades far more slowly (−19.7 points
+at 80 µs), consistent with T1 acting on the pair's excited
+components over long holds. The dose-response is the result;
+the D = 0 intercepts vary with day and triple (equator ≈ 0.90
+here vs 0.9583–0.9708 in the earlier phoenix runs) and are
+context, not the claim.
+
+### 10.3 Verdict — the deficit is a clock, not a gate
+
+The calibration T2 (182 µs on the day) is a Hahn-echo figure; an
+unechoed idle decays at T2*, and the measured curve puts the
+effective idle coherence in this circuit context at ~5–20 µs,
+with a coherent precession besides. The protocol's real
+front-half wait is dominated by Bob idling through Alice's
+mid-circuit measurement and the feed-forward latency — on this
+hardware plausibly a few µs — which sits on the steep part of
+the measured curve, where a few µs cost several points: the
+size of the ±i deficit. Combined with §10.1 (the pair is born
+clean) and the November 2 arc (not feed-forward, §9.1; not
+rotation, §9.2; not drift, §9.3; not readout order, §9.4), the
+loss **accumulates with time in the front half** rather than at
+any single operation.
+
+Honest limits: (i) the hold idled all three qubits together, so
+the input state's own precession is folded into the pair's idle
+effect — the claim is scoped to the front half as a whole;
+(ii) the ≈π rotation at 20 µs is an inference from the sub-0.5
+dip shared by all three equatorial states, stated as a
+signature, not a tomographic proof; (iii) both November 3
+experiments are single runs on one device. The motivated
+follow-ups are a split hold (Bob-only vs input-only) and
+dynamical decoupling scheduled across the measurement window —
+§9.5's XY4 sequence spanned the pre-measurement window, which
+tonight's curve identifies as the less dangerous one.
+
 ---
 
 *Independent research; not affiliated with or endorsed by IBM.
