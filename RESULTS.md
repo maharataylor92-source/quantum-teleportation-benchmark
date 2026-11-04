@@ -523,6 +523,71 @@ dynamical decoupling scheduled across the measurement window —
 §9.5's XY4 sequence spanned the pre-measurement window, which
 tonight's curve identifies as the less dangerous one.
 
+## 11. November 4, 2026 — two analyses of the archived data
+
+No new hardware was run for this section. Both analyses work
+entirely on datasets already archived in this repository, and both
+come from formulas in the author's *Grand Unification of Being*
+Formula Codex — Boltzmann's S = k·log W (Vol I) and the §XXV
+density-matrix decoherence decay — applied to the teleportation
+data as measurement, not metaphor. Scripts:
+`notebooks/entropy_analysis.py` and `notebooks/decoherence_fit.py`;
+outputs: `data/entropy_analysis_results.json` and
+`data/decoherence_fit_results.json`.
+
+### 11.1 The entropy ledger
+
+The Bell pair of §10.1, reconstructed from its saved correlators
+(rebuilt purity 0.9852 vs the autopsy's saved 0.9858), carries:
+
+- **S_AB = 0.1547 bits** — the pair state is nearly pure;
+- **S_A = S_B = 1.0000 bits** — each qubit alone is maximally
+  mixed, the Bell signature;
+- **I(A:B) = 1.8453 of a possible 2 bits** of total correlation;
+- **E_F = 0.9351 bits** of entanglement of formation, from the
+  saved concurrence 0.9547 (Wootters).
+
+Shannon entropies were also computed for all 70 count
+distributions saved across the November 2–3 arc. The hold sweep
+restates §10.2's clock in bits: equatorial-state output entropy
+climbs to ≈1.0 bit (a coin flip) by 40 µs of hold, while |0⟩
+rises slowly (0.095 → 0.740 bits at 80 µs). The §9.5 dynamical-
+decoupling rows carry slightly *higher* entropy than their
+baselines on every state — the entropic shadow of DD's slightly
+worse fidelities.
+
+### 11.2 The decoherence fit
+
+§10.2's hold sweep measured own-axis fidelity at six hold times;
+this analysis fits it. Model: F(t) = (1 + A·e^(−t/T2*)·cos(2πft +
+φ))/2, with f, T2*, φ shared across the three equatorial states
+and a per-state contrast A ≈ 0.79–0.81. Findings:
+
+- **Precession is required, not optional.** A no-rotation pure-
+  dephasing model fails at χ² ≈ 4888; adding the rotation drops
+  χ² by an order of magnitude under either envelope tried.
+- **≈π of phase accrues in ~17–20 µs** (the 20 µs sub-0.5 dip),
+  and fringe visibility is gone by 40 µs.
+- **The effective T2\* is ≈10–25 µs, model-dependent** (Gaussian
+  envelope: T ≈ 24 µs, f ≈ 18 kHz; single-exponential envelope:
+  f ≈ 30 kHz, T2\* ≈ 44 µs at poor χ²/dof ≈ 55, and is *not*
+  quoted as the value). Either way it sits far below the
+  181.6 µs Hahn-echo T2 of the pinned Bob qubit.
+- |0⟩ relaxes separately, on a ≈81 µs timescale toward F ≈ 0.68
+  (population relaxation of the three-qubit system, not a
+  single-qubit T1).
+
+Honest limits: the fit's sigmas are shot noise only, so absolute
+χ² remains poor — the decay is not a single clean exponential,
+consistent with several qubits precessing at slightly different
+rates; and the §10.3 caveat stands (the hold idled all three
+qubits, so input precession is folded in). The designed
+successor measurement is a two-quadrature Ramsey experiment on
+the pinned qubit, which separates phase from envelope directly;
+it is built and simulator-verified, and awaits the author's IBM
+account reactivation (an identity-verification hold, response
+due November 6) before it can run on hardware.
+
 ---
 
 *Independent research; not affiliated with or endorsed by IBM.

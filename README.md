@@ -137,8 +137,11 @@ the companion Lab Pack datasets. Full details: [RESULTS.md](RESULTS.md).
   follow-up datasets (`postselection_phoenix_results.json`,
   `tomography_phoenix_results.json`,
   `interleaved_phoenix_results.json`, `bobfirst_phoenix_results.json`,
-  `dd_phoenix_results.json`) and the two November 3, 2026 datasets
-  (`bellpair_phoenix_results.json`, `holdsweep_phoenix_results.json`)
+  `dd_phoenix_results.json`), the two November 3, 2026 datasets
+  (`bellpair_phoenix_results.json`, `holdsweep_phoenix_results.json`),
+  and the two November 4, 2026 analysis outputs
+  (`entropy_analysis_results.json`, `decoherence_fit_results.json`,
+  plus the `decoherence_fit.png` figure)
 - `notebooks/` — the Colab notebooks used for the Oct 28 kingston
   tomography and corrected phoenix runs (API key entered via
   `getpass` at runtime; no credentials are stored in them), plus the
@@ -147,7 +150,10 @@ the companion Lab Pack datasets. Full details: [RESULTS.md](RESULTS.md).
   `interleaved_phoenix.py`, `bobfirst_phoenix.py`, `dd_phoenix.py`)
   and the two November 3 run scripts (`bellpair_phoenix.py`,
   `holdsweep_phoenix.py`); instance CRN left as a placeholder and
-  the API token read from stdin, so they default to `MODE = "test"`
+  the API token read from stdin, so they default to `MODE = "test"`.
+  Also the two November 4 analysis scripts
+  (`entropy_analysis.py`, `decoherence_fit.py`), which run entirely
+  on the archived datasets in `data/` — no hardware, no credentials
   and cannot submit to hardware unattended
 
 ## How to cite

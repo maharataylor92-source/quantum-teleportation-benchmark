@@ -1,0 +1,35 @@
+{
+  "source": "holdsweep_phoenix_results.json (job dbl92nt8mdtc73d5mqn0)",
+  "equatorial_fit": {
+    "model": "F=(1+A exp(-t/T2*) cos(2 pi f t+phi))/2, shared f/T2*/phi",
+    "f_khz": 29.86237580240176,
+    "f_khz_err": 0.1262363818588552,
+    "T2star_us": 43.819871030633884,
+    "T2star_us_err": 1.4263448823669684,
+    "gamma_per_us": 0.0228206970143959,
+    "phi_rad": 0.076359658662877,
+    "contrasts": [
+      0.8071968096753677,
+      0.7861397142784395,
+      0.8021259610003153
+    ],
+    "chi2": 656.4135639337355,
+    "dof": 12
+  },
+  "gaussian_envelope_fit": {
+    "f_khz": 17.662207086054252,
+    "T_gauss_us": 24.39666337179297,
+    "chi2": 154.81509463251666
+  },
+  "reading": "Rotation required (no-rotation chi2 ~4888). ~pi phase in ~17-20 us. Fringe visibility gone by 40 us; effective T2* ~10-25 us (model-dependent), vs 182 us Hahn-echo T2. Single-exponential T2* 43.8 us is the exp-envelope fit value and should not be quoted alone (chi2/dof ~55). Ramsey hardware run is the proper measurement.",
+  "no_rotation_fit": {
+    "T2star_us": 3.211056217886515,
+    "chi2": 4888.2951176038005
+  },
+  "pop0_fit": {
+    "F_inf": 0.6758282172152703,
+    "A": 0.3099013690378426,
+    "T_us": 81.00708309460899
+  },
+  "limit": "Hold idled all three qubits together; gamma is the front-half effective rate with input precession folded in."
+}

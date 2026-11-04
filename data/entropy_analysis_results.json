@@ -1,0 +1,505 @@
+{
+  "pair": {
+    "purity_rebuilt": 0.9852406978607178,
+    "purity_saved": 0.9858055114746094,
+    "S_AB_bits": 0.15465005341811072,
+    "S_A_bits": 1.0,
+    "S_B_bits": 1.0,
+    "mutual_information_bits": 1.8453499465818892,
+    "concurrence": 0.9546952492299505,
+    "entanglement_of_formation_bits": 0.9351417238308087,
+    "fidelity_raw": 0.9909667968749998
+  },
+  "count_entropies": [
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|0>.0.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.09509274034874293
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|0>.5.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.2207902252087544
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|0>.10.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.2834859730193628
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|0>.20.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.416065091363473
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|0>.40.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.5657618363802472
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|0>.80.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.7400054855815377
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+>.0.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.4528472699391507
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+>.5.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9401083663627632
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+>.10.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9797896697549346
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+>.20.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.804238367487591
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+>.40.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9988990309438097
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+>.80.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9974386941170412
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+i>.0.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.47085022456055514
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+i>.5.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.955329034909151
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+i>.10.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.984257147853991
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+i>.20.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.8215596728342163
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+i>.40.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9996360541057687
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|+i>.80.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9984472994646618
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|-i>.0.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.4623044342804554
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|-i>.5.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9449771675039628
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|-i>.10.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.985184677709217
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|-i>.20.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.7946177871559692
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|-i>.40.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9995168467959137
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.teleport.|-i>.80.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.9964802634783249
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.ctrl.|0>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.008684475644846272
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.ctrl.|+>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.018173522097238166
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.ctrl.|+i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.011173818721219527
+    },
+    {
+      "file": "holdsweep_phoenix_results.json",
+      "path": "$.ctrl.|-i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.060744201132032626
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.base.|0>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.16425302014223447
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.base.|1>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.22772999802933955
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.base.|+>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.13044180753499326
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.base.|->.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.15901316379707198
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.base.|+i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.19331328025076627
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.base.|-i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.2557420200756248
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.dd.|0>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.20543790830015748
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.dd.|1>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.25135289699876623
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.dd.|+>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.1616405309162943
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.dd.|->.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.17455989394418525
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.dd.|+i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.24135112222701818
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.dd.|-i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.2719089137855451
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.ctrl.|0>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.013574079634171322
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.ctrl.|1>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.051875962588491455
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.ctrl.|+>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.008684475644846272
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.ctrl.|->.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.048229102763415986
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.ctrl.|+i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.008684475644846272
+    },
+    {
+      "file": "dd_phoenix_results.json",
+      "path": "$.ctrl.|-i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.04451776852792861
+    },
+    {
+      "file": "postselection_phoenix_results.json",
+      "path": "$.rows[0].counts",
+      "shots": 1024,
+      "outcomes": 8,
+      "H_bits": 2.2827039294655016
+    },
+    {
+      "file": "postselection_phoenix_results.json",
+      "path": "$.rows[1].counts",
+      "shots": 1024,
+      "outcomes": 8,
+      "H_bits": 2.3263760583772073
+    },
+    {
+      "file": "postselection_phoenix_results.json",
+      "path": "$.rows[2].counts",
+      "shots": 1024,
+      "outcomes": 8,
+      "H_bits": 2.244091505269513
+    },
+    {
+      "file": "postselection_phoenix_results.json",
+      "path": "$.rows[3].counts",
+      "shots": 1024,
+      "outcomes": 8,
+      "H_bits": 2.2554844907198177
+    },
+    {
+      "file": "postselection_phoenix_results.json",
+      "path": "$.rows[4].counts",
+      "shots": 1024,
+      "outcomes": 8,
+      "H_bits": 2.2767481821074753
+    },
+    {
+      "file": "postselection_phoenix_results.json",
+      "path": "$.rows[5].counts",
+      "shots": 1024,
+      "outcomes": 8,
+      "H_bits": 2.285630753504363
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.live.|0>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.18465024603069685
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.live.|1>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.24803865039974854
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.live.|+>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.2611814541160869
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.live.|->.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.29891721112260905
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.live.|+i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.3149524160628912
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.live.|-i>.counts",
+      "shots": 4096,
+      "outcomes": 2,
+      "H_bits": 0.3228144010633155
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.postselection.|0>.counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.1933999597238754
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.postselection.|1>.counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.1860795622822056
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.postselection.|+>.counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.2402816906575502
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.postselection.|->.counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.2173006384657414
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.postselection.|+i>.counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.2944603109405963
+    },
+    {
+      "file": "interleaved_phoenix_results.json",
+      "path": "$.postselection.|-i>.counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.2655776258747324
+    },
+    {
+      "file": "bobfirst_phoenix_results.json",
+      "path": "$.rows[0].counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.199814782830362
+    },
+    {
+      "file": "bobfirst_phoenix_results.json",
+      "path": "$.rows[1].counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.1958934913797488
+    },
+    {
+      "file": "bobfirst_phoenix_results.json",
+      "path": "$.rows[2].counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.204154906611752
+    },
+    {
+      "file": "bobfirst_phoenix_results.json",
+      "path": "$.rows[3].counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.218196492082332
+    },
+    {
+      "file": "bobfirst_phoenix_results.json",
+      "path": "$.rows[4].counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.270894281166209
+    },
+    {
+      "file": "bobfirst_phoenix_results.json",
+      "path": "$.rows[5].counts",
+      "shots": 4096,
+      "outcomes": 8,
+      "H_bits": 2.3023643817923625
+    }
+  ]
+}
